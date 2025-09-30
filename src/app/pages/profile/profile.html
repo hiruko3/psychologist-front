@@ -1,0 +1,14 @@
+<section class="about">
+  <h1>About</h1>
+  @let userInfo = user();
+  @if (userInfo) {
+    <ng-container>
+      <p><strong>User:</strong> {{ userInfo.name }}</p>
+      <p><strong>Email:</strong> {{ userInfo.id }}</p>
+    </ng-container>
+  } @else {
+    <ng-container>
+      <p>Loading user…</p>
+    </ng-container>
+  }
+</section>
